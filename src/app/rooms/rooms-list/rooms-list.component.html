@@ -1,0 +1,19 @@
+{{tre}}
+    <table class="table">
+        <tr>
+            <th>Room Number</th>
+            <th>Room Type</th>
+            <th>Room Price</th>
+            <th>Room Amenetities</th>
+            <th>CheckinTime</th>
+            <th>Select </th>
+        </tr>
+        <tr *ngFor="let room of rooms">
+            <td>{{room.roomNumber}}</td>
+            <td>{{room.roomType}}</td>
+            <td>{{room.amenitites}}</td>
+            <td>{{room.price}}</td>
+            <td>{{room.checkintime | date}}</td>
+            <td> <button class="btn btn-primary" (click)="selectroom(room)">Select</button></td>
+        </tr>
+    </table>

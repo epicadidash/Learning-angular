@@ -1,1 +1,13 @@
-<p>rooms works!</p>
+<h1>{{title}}</h1>
+<div [hidden]="hiderooms">
+<div [innerText]="numberofRooms"></div>
+</div> 
+<div>
+    <button class="btn btn-primary" (click)="Addroom()">Add room</button>
+</div>
+{{rooms?.availableRooms ?? 'norooms'}}
+<div *ngIf="rooms.availableRooms>0">
+    <app-rooms-list (selectedroom)="selectRoom($event)" [rooms]="roomList" [tre]="'Hello'"></app-rooms-list>
+</div>
+
+<button (click)="toogle()">toggle</button>

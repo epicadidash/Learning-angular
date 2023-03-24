@@ -19,6 +19,6 @@ ngOnInit(): void {
 
 }
 ngOnChanges(changes: SimpleChanges): void {
-    console.log(changes)
+    // console.log(changes)
 }
 }
